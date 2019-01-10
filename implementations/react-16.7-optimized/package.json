@@ -1,0 +1,21 @@
+{
+  "private": true,
+  "scripts": {
+    "make": "NODE_ENV=production babel --plugins transform-react-jsx js/app.jsx | uglifyjs -o build.min.js"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "create-react-class": "^15.6.3",
+    "director": "^1.2.8",
+    "react": "^16.7",
+    "react-dom": "^16.7",
+    "todomvc-app-css": "^2.1.2",
+    "todomvc-common": "^1.0.5"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-plugin-transform-react-jsx": "^6.8.0",
+    "babel-plugin-uglify": "^1.0.2",
+    "uglify-js": "^2.6.4"
+  }
+}

@@ -125,7 +125,7 @@ var app = app || {};
   };
 
 
-  var TodoFooter = React.createClass({
+  var TodoFooter = createReactClass({
     render: function () {
       var activeTodoWord = app.Utils.pluralize(this.props.count, 'item');
       var clearButton = null;
@@ -180,7 +180,7 @@ var app = app || {};
   var ESCAPE_KEY = 27;
   var ENTER_KEY = 13;
 
-  var TodoItem = React.createClass({
+  var TodoItem = createReactClass({
     handleSubmit: function (event) {
       var val = this.state.editText.trim();
       if (val) {
@@ -277,7 +277,7 @@ var app = app || {};
 
 	var ENTER_KEY = 13;
 
-	var TodoApp = React.createClass({
+	var TodoApp = createReactClass({
 		getInitialState: function () {
 			return {
 				nowShowing: app.ALL_TODOS,
@@ -308,7 +308,6 @@ var app = app || {};
 			event.preventDefault();
 
 			var val = this.state.newTodo.trim();
-
 			if (val) {
 				this.props.model.addTodo(val);
 				this.setState({newTodo: ''});
@@ -348,7 +347,7 @@ var app = app || {};
 		render: function () {
 			var footer;
 			var main;
-			var todos = this.props.model.todos;
+      var todos = this.props.model.todos;
 
 			var shownTodos = todos.filter(function (todo) {
 				switch (this.state.nowShowing) {
@@ -374,8 +373,8 @@ var app = app || {};
 						onCancel={this.cancel}
 					/>
 				);
-			}, this);
-
+      }, this);
+      
 			var activeTodoCount = todos.reduce(function (accum, todo) {
 				return todo.completed ? accum : accum + 1;
 			}, 0);
