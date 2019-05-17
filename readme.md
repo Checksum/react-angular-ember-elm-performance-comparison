@@ -1,5 +1,9 @@
 # Comparing performance of Elm, React, Ember, and Angular
 
+# Elm 0.19 vs React 16.7
+
+![elm-0.19vsReact-16.7](graphs/elm0.19-react16.7.png)
+
 This is a benchmark that tries to compare the performance of Elm, React, Ember, and Angular in a fair way. [I highly recommend reading the full analysis][blog], but the very short summary is that Elm is the fastest.
 
 [blog]: http://elm-lang.org/blog/blazing-fast-html-round-two
